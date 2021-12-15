@@ -1,0 +1,563 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".activity.DetailActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:background="@color/ungu"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:background="@drawable/ic_wave_detail"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view" />
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/ic_back_white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="32dp"
+            android:text="Bengal"
+            android:textColor="@color/ungu"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_back" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="28dp"
+            android:layout_marginTop="8dp"
+            android:text="Description"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_name" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_image"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginTop="24dp"
+            app:cardCornerRadius="18dp"
+            app:cardElevation="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_description">
+
+            <ImageView
+                android:id="@+id/iv_image"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@color/ungu" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_origin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginTop="32dp"
+            android:drawablePadding="6dp"
+            android:gravity="center_vertical"
+            android:text="Indonesia"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:drawableStartCompat="@drawable/ic_globe"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cv_image" />
+
+        <TextView
+            android:id="@+id/title_temprament"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginTop="16dp"
+            android:drawableStart="@drawable/ic_pets"
+            android:drawablePadding="8dp"
+            android:text="Temperament"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_origin" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_temprament"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="67dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="32dp"
+            android:text="Alert "
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title_temprament" />
+
+        <TextView
+            android:id="@+id/title_weight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:drawableStart="@drawable/ic_kg"
+            android:drawablePadding="8dp"
+            android:text="Weight"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_temprament" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_weight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="67dp"
+            android:layout_marginTop="4dp"
+            android:text="10 "
+            android:textStyle="italic"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title_weight" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:text="Kgs"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toBottomOf="@id/tv_weight"
+            app:layout_constraintStart_toEndOf="@id/tv_weight"
+            app:layout_constraintTop_toTopOf="@id/tv_weight" />
+
+        <TextView
+            android:id="@+id/title_life"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:drawableStart="@drawable/ic_life_span"
+            android:drawablePadding="8dp"
+            android:text="Average Life Span"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_weight" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_life"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="67dp"
+            android:layout_marginTop="4dp"
+            android:text="12 -  15 "
+            android:textStyle="italic"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title_life" />
+
+        <ImageView
+            android:id="@+id/iv_blob"
+            android:layout_width="130dp"
+            android:layout_height="100dp"
+            android:background="@drawable/ic_blob"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_life" />
+
+        <View
+            android:id="@+id/view_tengah"
+            android:layout_width="8dp"
+            android:layout_height="280dp"
+            android:background="@color/ungu"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_blob"
+            android:layout_marginTop="28dp" />
+
+
+        <TextView
+            android:id="@+id/title_adaptability"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/view_tengah"
+            app:layout_constraintTop_toBottomOf="@id/iv_blob"
+            android:layout_marginTop="16dp"
+            android:text="Adaptability"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_marginHorizontal="32dp"/>
+        <TextView
+            android:id="@+id/tv_adaptability"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/title_adaptability"
+            app:layout_constraintEnd_toEndOf="@id/title_adaptability"
+            app:layout_constraintTop_toBottomOf="@+id/title_adaptability"
+            android:text=" 5 "
+            android:gravity="center"
+            android:textStyle="italic"
+            android:textSize="14sp"
+            android:layout_marginTop="4dp"/>
+
+        <TextView
+            android:id="@+id/title_affection_level"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/view_tengah"
+            app:layout_constraintTop_toBottomOf="@id/tv_adaptability"
+            android:text="Affection Level"
+            android:layout_marginTop="16dp"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_marginHorizontal="32dp"/>
+        <TextView
+            android:id="@+id/tv_affection_level"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/title_affection_level"
+            app:layout_constraintEnd_toEndOf="@id/title_affection_level"
+            app:layout_constraintTop_toBottomOf="@+id/title_affection_level"
+            android:text=" 5 "
+            android:gravity="center"
+            android:textStyle="italic"
+            android:textSize="14sp"
+            android:layout_marginTop="4dp"/>
+
+        <TextView
+            android:id="@+id/title_child_friendly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/view_tengah"
+            app:layout_constraintTop_toBottomOf="@id/tv_affection_level"
+            android:layout_marginTop="16dp"
+            android:text="Child Friendly"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_marginHorizontal="32dp"/>
+        <TextView
+            android:id="@+id/tv_child_friendly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/title_child_friendly"
+            app:layout_constraintEnd_toEndOf="@id/title_child_friendly"
+            app:layout_constraintTop_toBottomOf="@+id/title_child_friendly"
+            android:text=" 5 "
+            android:gravity="center"
+            android:textStyle="italic"
+            android:textSize="14sp"
+            android:layout_marginTop="4dp"/>
+
+        <TextView
+            android:id="@+id/title_dog_friendly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/view_tengah"
+            app:layout_constraintTop_toBottomOf="@id/tv_child_friendly"
+            android:text="Dog Friendly"
+            android:layout_marginTop="16dp"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_marginHorizontal="32dp"/>
+        <TextView
+            android:id="@+id/tv_dog_friendly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/title_dog_friendly"
+            app:layout_constraintEnd_toEndOf="@id/title_dog_friendly"
+            app:layout_constraintTop_toBottomOf="@+id/title_dog_friendly"
+            android:text=" 5 "
+            android:gravity="center"
+            android:textStyle="italic"
+            android:textSize="14sp"
+            android:layout_marginTop="4dp"/>
+
+        <TextView
+            android:id="@+id/title_energy_level"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/view_tengah"
+            app:layout_constraintTop_toBottomOf="@id/tv_dog_friendly"
+            android:text="Energy Level"
+            android:layout_marginTop="16dp"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_marginHorizontal="32dp"/>
+        <TextView
+            android:id="@+id/tv_energy_level"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/title_energy_level"
+            app:layout_constraintEnd_toEndOf="@id/title_energy_level"
+            app:layout_constraintTop_toBottomOf="@+id/title_energy_level"
+            android:text=" 5 "
+            android:gravity="center"
+            android:textStyle="italic"
+            android:textSize="14sp"
+            android:layout_marginTop="4dp"/>
+
+        <TextView
+            android:id="@+id/title_grooming"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/view_tengah"
+            app:layout_constraintTop_toBottomOf="@id/tv_energy_level"
+            android:text="Grooming"
+            android:layout_marginTop="16dp"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_marginHorizontal="32dp"/>
+        <TextView
+            android:id="@+id/tv_grooming"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/title_grooming"
+            app:layout_constraintEnd_toEndOf="@id/title_grooming"
+            app:layout_constraintTop_toBottomOf="@+id/title_grooming"
+            android:text=" 5 "
+            android:gravity="center"
+            android:textStyle="italic"
+            android:textSize="14sp"
+            android:layout_marginTop="4dp"/>
+
+
+
+
+
+        <TextView
+            android:id="@+id/title_health_issues"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/view_tengah"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_blob"
+            android:layout_marginTop="16dp"
+            android:text="Health Issues"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_marginHorizontal="32dp"/>
+        <TextView
+            android:id="@+id/tv_health_issues"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/title_health_issues"
+            app:layout_constraintEnd_toEndOf="@id/title_health_issues"
+            app:layout_constraintTop_toBottomOf="@+id/title_health_issues"
+            android:text=" 5 "
+            android:gravity="center"
+            android:textStyle="italic"
+            android:textSize="14sp"
+            android:layout_marginTop="4dp"/>
+
+        <TextView
+            android:id="@+id/title_intelligence"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/view_tengah"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_health_issues"
+            android:text="Intelligence"
+            android:layout_marginTop="16dp"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_marginHorizontal="32dp"/>
+        <TextView
+            android:id="@+id/tv_intelligence"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/title_intelligence"
+            app:layout_constraintEnd_toEndOf="@id/title_intelligence"
+            app:layout_constraintTop_toBottomOf="@+id/title_intelligence"
+            android:text=" 5 "
+            android:gravity="center"
+            android:textStyle="italic"
+            android:textSize="14sp"
+            android:layout_marginTop="4dp"/>
+
+        <TextView
+            android:id="@+id/title_shedding_level"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/view_tengah"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_intelligence"
+            android:text="Shedding Level"
+            android:layout_marginTop="16dp"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_marginHorizontal="32dp"/>
+        <TextView
+            android:id="@+id/tv_shedding_level"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/title_shedding_level"
+            app:layout_constraintEnd_toEndOf="@id/title_shedding_level"
+            app:layout_constraintTop_toBottomOf="@+id/title_shedding_level"
+            android:text=" 5 "
+            android:gravity="center"
+            android:textStyle="italic"
+            android:textSize="14sp"
+            android:layout_marginTop="4dp"/>
+
+        <TextView
+            android:id="@+id/title_social_needs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/view_tengah"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_shedding_level"
+            android:text="Social Needs"
+            android:layout_marginTop="16dp"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_marginHorizontal="32dp"/>
+        <TextView
+            android:id="@+id/tv_social_needs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/title_social_needs"
+            app:layout_constraintEnd_toEndOf="@id/title_social_needs"
+            app:layout_constraintTop_toBottomOf="@+id/title_social_needs"
+            android:text=" 5 "
+            android:gravity="center"
+            android:textStyle="italic"
+            android:textSize="14sp"
+            android:layout_marginTop="4dp"/>
+
+        <TextView
+            android:id="@+id/title_stranger_friendly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/view_tengah"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_social_needs"
+            android:text="Stranger Friendly"
+            android:layout_marginTop="16dp"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_marginHorizontal="32dp"/>
+        <TextView
+            android:id="@+id/tv_stranger_friendly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/title_stranger_friendly"
+            app:layout_constraintEnd_toEndOf="@id/title_stranger_friendly"
+            app:layout_constraintTop_toBottomOf="@+id/title_stranger_friendly"
+            android:text=" 5 "
+            android:gravity="center"
+            android:textStyle="italic"
+            android:textSize="14sp"
+            android:layout_marginTop="4dp"/>
+
+        <TextView
+            android:id="@+id/title_vocalisation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/view_tengah"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_stranger_friendly"
+            android:text="Vocalisation"
+            android:layout_marginTop="16dp"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_marginHorizontal="32dp"/>
+        <TextView
+            android:id="@+id/tv_vocalisation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/title_vocalisation"
+            app:layout_constraintEnd_toEndOf="@id/title_vocalisation"
+            app:layout_constraintTop_toBottomOf="@+id/title_vocalisation"
+            android:text=" 5 "
+            android:gravity="center"
+            android:textStyle="italic"
+            android:textSize="14sp"
+            android:layout_marginTop="4dp"/>
+
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_wikped"
+            android:layout_width="180dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="42dp"
+            android:gravity="center"
+            android:text="Wikipedia"
+            android:textColor="@color/ungu"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:background="@drawable/custom_button_wikped"
+            app:layout_constraintTop_toBottomOf="@+id/tv_vocalisation"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <View
+            android:id="@+id/view_white"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_wikped"
+            app:layout_constraintBottom_toTopOf="@id/iv_wave_bawah"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <ImageView
+            android:id="@+id/iv_wave_bawah"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/view_bawah"
+            android:background="@drawable/ic_wave_bawah"/>
+        <View
+            android:id="@+id/view_bawah"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:background="@color/ungu" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
